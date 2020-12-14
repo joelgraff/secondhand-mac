@@ -32,5 +32,4 @@ sudo apt purge ubuntu-web-launchers
 
 #cleanup
 sudo apt autoclean
-sudo apt cleanup
-sudo apt autoremove
+sudo apt -y autoremove
