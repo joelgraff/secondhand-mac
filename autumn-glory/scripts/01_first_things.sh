@@ -40,6 +40,9 @@ sudo ufw enable
 #remove the amazon web launcher
 sudo apt purge ubuntu-web-launchers
 
+#fix borken
+sudo apt install -f
+
 #cleanup
 sudo apt autoclean
 sudo apt -y autoremove
