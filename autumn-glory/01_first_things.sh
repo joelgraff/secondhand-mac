@@ -6,6 +6,9 @@ sudo cp etc/apt/sources.list /etc/apt/sources.list
 #add TLP for laptop battery performance
 sudo add-apt-repository -y ppa:linrunner/tlp
 
+#bypass restart services question for libc6
+echo libraries/restart-without-asking select true | sudo debconf-set-selections
+
 #update from repo additions
 sudo apt update && sudo apt upgrade -y
 
@@ -25,7 +28,7 @@ echo msttcorefonts msttcorefonts/accepted-mscorefonts-eula select true | sudo de
 
 echo msttcorefonts msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
 
-#install ms core fonts
+#install ms core fontsapt
 sudo apt install -y ttf-mscorefonts-installer
 
 #adjust system swappiness
