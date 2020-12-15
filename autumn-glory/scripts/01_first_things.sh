@@ -1,4 +1,7 @@
 #!/bin/bash
+(
+
+echo # Adding repositories and getting updates...
 
 #enable partner repos and update / upgrade
 sudo cp etc/apt/sources.list /etc/apt/sources.list
@@ -10,16 +13,25 @@ sudo add-apt-repository -y ppa:linrunner/tlp
 echo libraries/restart-without-asking select true | sudo debconf-set-selections
 
 #update from repo additions
-sudo apt update && sudo apt upgrade -y
+sudo apt-get update && sudo apt upgrade -y
+
+echo 20
+echo # Installing TLP...
 
 #install TLP
-sudo apt install -y tlp tlp-rdw
+sudo apt-get install -y tlp tlp-rdw
 
 #start the TLP service
 sudo tlp start
 
+echo 40
+echo # Installing ubuntu-restricted-extras...
+
 #install multimedia restricted extras
-sudo apt install -y ubuntu-restricted-extras
+sudo apt-get install -y ubuntu-restricted-extras
+
+echo 60
+echo # Installing Microsoft TrueType fonts...
 
 #install microsoft TrueType fonts
 
@@ -29,7 +41,10 @@ echo msttcorefonts msttcorefonts/accepted-mscorefonts-eula select true | sudo de
 echo msttcorefonts msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
 
 #install ms core fontsapt
-sudo apt install -y ttf-mscorefonts-installer
+sudo apt-get install -y ttf-mscorefonts-installer
+
+echo # System cleanup...
+echo 80
 
 #adjust system swappiness
 sudo cp etc/sysctl.conf /etc/
@@ -38,11 +53,13 @@ sudo cp etc/sysctl.conf /etc/
 sudo ufw enable
 
 #remove the amazon web launcher
-sudo apt purge ubuntu-web-launchers
+sudo apt-get purge ubuntu-web-launchers
 
 #fix borken
-sudo apt install -f
+sudo apt-get install -f
 
 #cleanup
-sudo apt autoclean
-sudo apt -y autoremove
+sudo apt-get clean
+sudo apt-get autoclean
+sudo apt-get -y autoremove
+) | zenity --title 'Setting up Secondhand Mac' --width=400 --progress --auto-kill --auto-close
