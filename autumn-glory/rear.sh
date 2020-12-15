@@ -20,6 +20,9 @@ sudo usr/sbin/rear format -- --efi /dev/sdb
 
 #copy config files over
 cp ../etc/rear/local.conf etc/rear/local.conf
+cp ../usr/share/rear/conf/* usr/share/rear/conf
+cp ../usr/share/rear/lib/* usr/share/rear/lib
+cp ../usr/share/rear/check/default/* usr/share/rear/check/default
 
 echo 60
 echo 'Creating Rescue USB...'
