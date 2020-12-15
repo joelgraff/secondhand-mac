@@ -3,7 +3,7 @@
 #install zenity
 sudo apt install zenity
 
-scripts=(scripts_test/*)
+scripts=(scripts/*)
 IFS=" " read -r -a script_list <<< ${scripts[*]}
 script_count=${#script_list[*]}
 counter=100
