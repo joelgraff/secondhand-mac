@@ -7,7 +7,7 @@ counter=100
 
 for script in ${script_list[*]}
     do
-        bash ./$script > script.log
+        bash ./$script
         counter=$((counter+=100))
         let pct=counter/script_count
     done
