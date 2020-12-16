@@ -1,7 +1,4 @@
 #!/bin/bash
-(
-
-echo # Adding repositories and getting updates...
 
 #enable partner repos and update / upgrade
 sudo cp etc/apt/sources.list /etc/apt/sources.list
@@ -15,23 +12,14 @@ echo libraries/restart-without-asking select true | sudo debconf-set-selections
 #update from repo additions
 sudo apt-get update && sudo apt upgrade -y
 
-echo 20
-echo # Installing TLP...
-
 #install TLP
 sudo apt-get install -y tlp tlp-rdw
 
 #start the TLP service
 sudo tlp start
 
-echo 40
-echo # Installing ubuntu-restricted-extras...
-
 #install multimedia restricted extras
 sudo apt-get install -y ubuntu-restricted-extras
-
-echo 60
-echo # Installing Microsoft TrueType fonts...
 
 #install microsoft TrueType fonts
 
@@ -62,4 +50,3 @@ sudo apt-get install -f
 sudo apt-get clean
 sudo apt-get autoclean
 sudo apt-get -y autoremove
-) | zenity --title 'Setting up Secondhand Mac' --width=400 --progress --auto-kill --auto-close
