@@ -21,10 +21,12 @@ sudo tlp start
 #install multimedia restricted extras
 sudo apt-get install -y ubuntu-restricted-extras
 
+#install gdebi
+sudo apt-get install -y gedbi
 #install microsoft TrueType fonts
 
 #set up auto-accept
-echo msttcorefonts msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
+echo msttcorefonts msttcorefonts/present-mscorefonts-eula select true | sudo debconf-set-selections
 
 echo msttcorefonts msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
 
