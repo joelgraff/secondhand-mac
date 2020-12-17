@@ -12,6 +12,9 @@ echo libraries/restart-without-asking select true | sudo debconf-set-selections
 #update from repo additions
 sudo apt-get update && sudo apt upgrade -y
 
+#bash script gui library
+sudo apt-get install -y zenity
+
 #install TLP
 sudo apt-get install -y tlp tlp-rdw
 
@@ -23,6 +26,7 @@ sudo apt-get install -y ubuntu-restricted-extras
 
 #install gdebi
 sudo apt-get install -y gedbi
+
 #install microsoft TrueType fonts
 
 #set up auto-accept
