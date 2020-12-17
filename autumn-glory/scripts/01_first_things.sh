@@ -49,7 +49,7 @@ sudo ufw enable
 #remove the amazon web launcher
 sudo apt-get purge ubuntu-web-launchers
 
-#fix borken
+#fix broken
 sudo apt-get install -f
 
 #cleanup
