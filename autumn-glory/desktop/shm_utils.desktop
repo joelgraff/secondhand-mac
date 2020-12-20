@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Secondhand Mac Utilites
+Comment=Utilities and support for Secondhand Mac Ubuntu installations
+Exec=/home/samuel/ugene-1.11.5/ugene -ui
+Path=/home/samuel/ugene-1.11.5/
+Icon=/usr/share/icons/Humanity/apps/32/access.svg
+Terminal=false
+Type=Application
+Categories=Utility;Development;

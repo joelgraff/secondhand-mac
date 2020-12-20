@@ -1,12 +1,21 @@
 #!/bin/bash
 
-#clone rear and install dependencies
-git clone https://github.com/rear/rear
+if [[ ! -d "/opt/secondhand-mac/rear/" ]]; then
+    cd /opt/secondhand-mac/rear
+    sudo -A git pull
+
+else
+
+    sudo -A mkdir -p /opt/secondhand-mac/rear
+
+    #clone rear and install dependencies
+    sudo git clone https://github.com/rear/rear /opt/secondhand-mac/rear
+fi
 
 sudo apt install -y extlinux
 
 #move into rear folder and begin build
-cd rear/
+cd /opt/secondhand-mac/rear/
 
 #wipe the USB stick
 sudo wipefs -a -f /dev/sdb
