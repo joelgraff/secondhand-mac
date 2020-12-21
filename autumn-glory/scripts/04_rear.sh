@@ -1,8 +1,11 @@
 #!/bin/bash
 
+wd=$PWD
+
 if [[ -d "/opt/secondhand-mac/rear/" ]]; then
     cd /opt/secondhand-mac/rear
     sudo -A git pull
+    cd $wd
 
 else
 
