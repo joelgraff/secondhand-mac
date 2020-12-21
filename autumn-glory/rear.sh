@@ -14,21 +14,8 @@ fi
 
 sudo apt install -y extlinux
 
-#move into rear folder and begin build
-cd /opt/secondhand-mac/rear/
-
-#wipe the USB stick
-sudo wipefs -a -f /dev/sdb
-
-#format USB for EFI
-sudo usr/sbin/rear format -- --efi /dev/sdb
-
 #copy config files over
-cp ../etc/rear/local.conf etc/rear/local.conf
-cp ../usr/share/rear/conf/* usr/share/rear/conf
-cp ../usr/share/rear/lib/* usr/share/rear/lib
-cp ../usr/share/rear/check/default/* usr/share/rear/check/default
-
-sudo usr/sbin/rear -v mkrescue
-
-sudo usr/sbin/rear -v mkbackup
+sudo cp ../etc/rear/local.conf /opt/secondhand-mac/rear/etc/rear/local.conf
+sudo cp ../usr/share/rear/conf/* /opt/secondhand-mac/rear/usr/share/rear/conf
+sudo cp ../usr/share/rear/lib/* /opt/secondhand-mac/rear/usr/share/rear/lib
+sudo cp ../usr/share/rear/check/default/* /opt/secondhand-mac/rear/usr/share/rear/check/default
