@@ -4,8 +4,8 @@ scripts=(scripts/*)
 IFS=" " read -r -a script_list <<< ${scripts[*]}
 
 sudo -A mkdir -p /opt/secondhand-mac/icons
-sudo cp opt/secondhand-mac/* /opt/secondhand-mac
-sudo cp usr/share/applications/* /usr/share/applications
+sudo cp -r opt/secondhand-mac/* /opt/secondhand-mac
+sudo cp -r usr/share/applications/* /usr/share/applications
 
 for script in ${script_list[*]}
     do

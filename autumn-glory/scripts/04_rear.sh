@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ ! -d "/opt/secondhand-mac/rear/" ]]; then
+if [[ -d "/opt/secondhand-mac/rear/" ]]; then
     cd /opt/secondhand-mac/rear
     sudo -A git pull
 
@@ -14,6 +14,7 @@ fi
 
 sudo apt install -y extlinux
 
+echo 'REAR PWD='$PWD
 #copy config files over
 sudo cp ../etc/rear/local.conf /opt/secondhand-mac/rear/etc/rear/local.conf
 sudo cp ../usr/share/rear/conf/* /opt/secondhand-mac/rear/usr/share/rear/conf
