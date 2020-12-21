@@ -12,8 +12,8 @@ for script in ${script_list[*]}
         bash ./$script
     done
 
-zoom_installed = False
-shm_utils_installed = False
+zoom_installed=False
+shm_utils_installed=False
 
 if [[ -f /usr/share/applications/Zoom.desktop ]]; then
     zoom_installed=True
