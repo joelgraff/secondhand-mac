@@ -10,7 +10,8 @@ fi
 if [[ $target_choice == 'Make Rescue USB' ]]; then
     bash /opt/secondhand-mac/make_rescue_usb.sh
 elif [[ $target_choice == 'View README' ]]; then
-    gedit /opt/secondhand-mac/autumn-glory/desktop/README.txt
+    gedit /opt/secondhand-mac/README.txt
 elif [[ $target_choice == 'Update Secondhand Mac Utilities' ]]; then
     bash /opt/secondhand-mac/update.sh
+    zenity --info --width=300 -text="Update complete.\n\nRestart Secondhand Mac Utilities."
 fi

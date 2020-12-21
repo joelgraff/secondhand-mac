@@ -25,7 +25,7 @@ sudo tlp start
 sudo apt-get install -y ubuntu-restricted-extras
 
 #install gdebi
-sudo apt-get install -y gedbi
+sudo apt-get install -y gdebi
 
 #install microsoft TrueType fonts
 
@@ -37,9 +37,6 @@ echo msttcorefonts msttcorefonts/accepted-mscorefonts-eula select true | sudo de
 #install ms core fontsapt
 sudo apt-get install -y ttf-mscorefonts-installer
 
-echo # System cleanup...
-echo 80
-
 #adjust system swappiness
 sudo cp etc/sysctl.conf /etc/
 
@@ -48,11 +45,3 @@ sudo ufw enable
 
 #remove the amazon web launcher
 sudo apt-get purge ubuntu-web-launchers
-
-#fix broken
-sudo apt-get install -f
-
-#cleanup
-sudo apt-get clean
-sudo apt-get autoclean
-sudo apt-get -y autoremove

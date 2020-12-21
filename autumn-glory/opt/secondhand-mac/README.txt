@@ -25,6 +25,21 @@ found there.
 
 This MacBook uses the 'Autumn Glory' flavor of Secondhand Mac.
 
+-----------------------
+Secondhand Mac Utilites
+-----------------------
+
+The Secondhand Mac Utilites is a small selection of utilities designed to help
+maintain / restore linux on the MacBook.  Click the icon on the favorites bar
+to launch.
+
+Options:
+--------
+
+1.  Update - Pulls updates from the project github repository.
+2.  View README - View this README
+3.  Update Rescue USB - Update / create a rescue USB stick (see below)
+
 --------------------
 Using the Rescue USB
 --------------------
