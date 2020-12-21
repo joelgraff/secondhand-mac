@@ -19,7 +19,7 @@ sudo apt install -y extlinux
 
 echo 'REAR PWD='$PWD
 #copy config files over
-sudo cp ../etc/rear/local.conf /opt/secondhand-mac/rear/etc/rear/local.conf
-sudo cp ../usr/share/rear/conf/* /opt/secondhand-mac/rear/usr/share/rear/conf
-sudo cp ../usr/share/rear/lib/* /opt/secondhand-mac/rear/usr/share/rear/lib
-sudo cp ../usr/share/rear/check/default/* /opt/secondhand-mac/rear/usr/share/rear/check/default
+sudo cp etc/rear/local.conf /opt/secondhand-mac/rear/etc/rear/local.conf
+sudo cp usr/share/rear/conf/* /opt/secondhand-mac/rear/usr/share/rear/conf
+sudo cp usr/share/rear/lib/* /opt/secondhand-mac/rear/usr/share/rear/lib
+sudo cp usr/share/rear/check/default/* /opt/secondhand-mac/rear/usr/share/rear/check/default

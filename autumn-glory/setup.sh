@@ -23,6 +23,6 @@ if [[ -f shm_utils_file='/usr/share/applications/shm_utils.desktop' ]]; then
     shm_utils_installed=True
 fi
 
-if [[ $zoom_installed && $shn_utils_installed ]]; then
-    dconf write /org/gnome/shell/favorite-apps "['firefox.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'libreoffice-writer.desktop', 'snap-store_ubuntu-software.desktop', 'yelp.desktop', 'shm_utils.desktop']"
+if [[ $zoom_installed && $shm_utils_installed ]]; then
+    dconf write /org/gnome/shell/favorite-apps "['firefox.desktop', 'thunderbird.desktop', 'org.gnome.Nautilus.desktop', 'libreoffice-writer.desktop', 'snap-store_ubuntu-software.desktop', 'yelp.desktop', 'shm_utils.desktop', 'Zoom.desktop']"
 fi
