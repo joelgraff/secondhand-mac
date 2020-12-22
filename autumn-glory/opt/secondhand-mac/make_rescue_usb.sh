@@ -59,7 +59,7 @@ echo 'Preparing rescue USB on '$target_disk'...'
 cd /opt/secondhand-mac/rear/
 
 #wipe the USB stick
-sudo wipefs -a -f $target_disk
+sudo -A wipefs -a -f $target_disk
 
 #format USB for EFI
 sudo usr/sbin/rear format -- --efi $target_disk
