@@ -40,6 +40,10 @@ sudo apt-get install -y ttf-mscorefonts-installer
 #adjust system swappiness
 sudo cp etc/sysctl.conf /etc/
 
+#setup GUI password support
+sudo cp etc/sudo.conf /etc/
+sudo cp usr/local/bin/zenity_passphrase.sh /usr/local/bin
+
 #enable the firewall
 sudo ufw enable
 
