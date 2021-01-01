@@ -24,13 +24,17 @@ if [[ version=='' ]]; then
     fi
 fi
 
-tmp=$(mktemp -d)'/'$version
+tmp=$(mktemp -d)
+
 git clone http://github.com/joelgraff/secondhand-mac $tmp
+
+tmp=tmp'/'$version
 
 $(sudo -A cp =$tmp'/opt/secondhand-mac/*' /opt/secondhand-mac)
 
 #update rear
 cd /opt/secondhand-mac/rear
+
 sudo git pull
 
 #copy config files over
