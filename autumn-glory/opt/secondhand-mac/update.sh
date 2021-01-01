@@ -24,19 +24,17 @@ if [[ version=='' ]]; then
     fi
 fi
 
-tmp=$(mktemp -d)
+tmp=$(mktemp -d)'/'$version
 git clone http://github.com/joelgraff/secondhand-mac $tmp
 
-source=$tmp'/'$version'/desktop/*'
-
-$(sudo -A cp $source /opt/secondhand-mac)
+$(sudo -A cp =$tmp'/opt/secondhand-mac/*' /opt/secondhand-mac)
 
 #update rear
 cd /opt/secondhand-mac/rear
 sudo git pull
 
 #copy config files over
-sudo cp etc/rear/local.conf /opt/secondhand-mac/rear/etc/rear/local.conf
-sudo cp usr/share/rear/conf/* /opt/secondhand-mac/rear/usr/share/rear/conf
-sudo cp usr/share/rear/lib/* /opt/secondhand-mac/rear/usr/share/rear/lib
-sudo cp usr/share/rear/check/default/* /opt/secondhand-mac/rear/usr/share/rear/check/default
+sudo cp $tmp'/etc/rear/local.conf' /opt/secondhand-mac/rear/etc/rear/local.conf
+sudo cp $tmp'/usr/share/rear/conf/*' /opt/secondhand-mac/rear/usr/share/rear/conf
+sudo cp $tmp'/usr/share/rear/lib/*' /opt/secondhand-mac/rear/usr/share/rear/lib
+sudo cp $tmp'/usr/share/rear/check/default/*' /opt/secondhand-mac/rear/usr/share/rear/check/default
