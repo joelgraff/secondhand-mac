@@ -30,7 +30,7 @@ git clone http://github.com/joelgraff/secondhand-mac $tmp
 
 tmp=$tmp'/'$version
 
-$(sudo -A cp =$tmp'/opt/secondhand-mac/*' /opt/secondhand-mac)
+$(sudo -A cp $tmp'/opt/secondhand-mac/*' /opt/secondhand-mac)
 
 #update rear
 cd /opt/secondhand-mac/rear
