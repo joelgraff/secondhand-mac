@@ -64,7 +64,7 @@ sudo -A wipefs -a -f $target_disk
 #create partition table
 echo "o
 w
-"|fdisk $target_disk
+"|sudo -A fdisk $target_disk
 
 #format USB for EFI
 sudo usr/sbin/rear format -- --efi $target_disk
