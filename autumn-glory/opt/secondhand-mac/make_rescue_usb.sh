@@ -58,6 +58,9 @@ echo 'Preparing rescue USB on '$target_disk'...'
 #move into rear folder
 cd /opt/secondhand-mac/rear/
 
+#unmount any mounted partitions
+sudo umount $target_desk*
+
 #wipe the USB stick
 sudo -A wipefs -a -f $target_disk
 
