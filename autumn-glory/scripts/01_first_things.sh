@@ -49,3 +49,7 @@ sudo ufw enable
 
 #remove the amazon web launcher
 sudo apt-get purge ubuntu-web-launchers
+
+#fix boot issue (MokList error)
+sudo cp /boot/efi/EFI/ubuntu/grubx64.efi /boot/efi/EFI/ubuntu/shimx64.efi
+sudo apt remove -y --purge shim shim-signed
